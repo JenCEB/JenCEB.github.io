@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Derecho</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f0fff0;
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding: 0;
+      color: #4B0082;
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .intro-box {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 30px 50px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    .intro-box h1 {
+      font-size: 48px;
+      color: #6A5ACD;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px #fff;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .intro-box p {
+      font-size: 20px;
+      color: #556B2F;
+      margin-bottom: 25px;
+    }
+
+    .btn-entrar, .boton-link-vino, .btn-musica {
+      background-color: #8FBC8F;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px;
+      transition: transform 0.3s ease, background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-entrar:hover,
+    .boton-link-vino:hover,
+    .btn-musica:hover {
+      background-color: #6B8E23;
+      transform: scale(1.1);
+    }
+
+    .contenido {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      margin: 40px auto;
+      max-width: 1000px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+    }
+
+    .contenido.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      font-style: italic;
+      color: #4B0082;
+    }
+
+    h3 {
+      text-align: center;
+      font-style: italic;
+      color: #2E8B57;
+    }
+
+    .china {
+      font-size: 45px;
+      font-family: 'Brush Script MT', cursive;
+      font-weight: bold;
+      color: #4B0082;
+      text-align: center;
+      margin-top: 30px;
+      text-shadow: 2px 2px 4px #aaa;
+    }
+
+    .tabla-7r {
+      margin: 30px auto;
+      text-align: center;
+      border-collapse: collapse;
+      width: 80%;
+    }
+
+    .tabla-7r th, .tabla-7r td {
+      border: 1px solid #0000FF;
+      padding: 10px;
+      background-color: #fff0f5;
+    }
+
+    .tabla-7r th {
+      background-color: #ffb6c1;
+      color: #000080;
+    }
+
+    details {
+      margin: 20px 50px;
+      transition: all 0.4s ease;
+    }
+
+    summary {
+      font-size: 20px;
+      font-weight: bold;
+      color: #6A5ACD;
+      cursor: pointer;
+    }
+
+    p {
+      margin-left: 20px;
+    }
+
+    img {
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="intro">
+    <div class="intro-box">
+      <h1>Bienvenido a mi página</h1>
+      <p>Por Jen</p>
+      <a href="#contenido-principal">
+        <button class="btn-entrar">Entrar</button>
+      </a>
+      <a href="index.html" class="boton-link-vino">Volver a Página 1</a>
+      <a href="jen3.html" class="boton-link-vino">Ir a Página 3</a>
+      <button class="btn-musica" onclick="toggleMusic()">🎵 Música</button>
+    </div>
+    <audio id="musica-fondo" preload="auto" loop>
+      <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio HTML5.
+    </audio>
+  </div>
+
+  <div id="contenido-principal" class="contenido">
+    <h1>Derecho</h1>
+    <h3>Para estudiar Derecho es fundamental tener habilidades como pensamiento crítico, argumentación, análisis, expresión oral y escrita, así como una fuerte ética y sentido de la justicia.</h3>
+
+    <div class="china">China</div>
+
+    <div style="text-align: center; margin-top: 30px;">
+      <img src="https://tse1.explicit.bing.net/th/id/OIP.jWs2VKep94BYgQEm7H2WeQHaE7?rs=1&pid=ImgDetMain" alt="Templo en China" width="300">
+    </div>
+
+    <table class="tabla-7r">
+      <tr>
+        <th>R</th>
+        <th>Significado</th>
+        <th>Importancia</th>
+      </tr>
+      <tr>
+        <td>Reducir</td>
+        <td>Disminuir el uso innecesario de recursos y generación de basura</td>
+        <td>Ayuda a disminuir el impacto ambiental y el uso excesivo de recursos</td>
+      </tr>
+      <tr>
+        <td>Reutilizar</td>
+        <td>Volver a emplear objetos o materiales antes de desecharlos</td>
+        <td>Permite aprovechar más tiempo los productos y evita el desperdicio</td>
+      </tr>
+      <tr>
+        <td>Reciclar</td>
+        <td>Transformar residuos para crear nuevos artículos</td>
+        <td>Disminuye la contaminación y la extracción de materias primas</td>
+      </tr>
+      <tr>
+        <td>Reparar</td>
+        <td>Solucionar daños en productos para alargar su utilidad</td>
+        <td>Favorece la durabilidad y reduce la necesidad de comprar nuevo</td>
+      </tr>
+      <tr>
+        <td>Rechazar</td>
+        <td>Negarse a consumir productos dañinos para el entorno</td>
+        <td>Promueve decisiones más responsables y sostenibles</td>
+      </tr>
+      <tr>
+        <td>Reflexionar</td>
+        <td>Cuestionarse el efecto de nuestras acciones sobre el planeta</td>
+        <td>Motiva a actuar con conciencia ecológica</td>
+      </tr>
+      <tr>
+        <td>Reeducar</td>
+        <td>Promover el aprendizaje de hábitos responsables con el ambiente</td>
+        <td>Contribuye a formar ciudadanos más comprometidos con la sostenibilidad</td>
+      </tr>
+    </table>
+
+    <details><summary>1er Semestre</summary><p>Matemáticas 1</p><p>Taller de Lectura 1</p><p>Química 1</p><p>Inglés 1</p><p>Informática 1</p><p>Orientación Educativa</p><p>Metodología</p><p>Ética 1</p><p>Educación Física</p></details>
+    <details><summary>2do Semestre</summary><p>Matemáticas 2</p><p>Taller de Lectura 2</p><p>Química 2</p><p>Inglés 2</p><p>Informática 2</p><p>Ética 2</p><p>Orientación Educativa 2</p><p>Educación Física</p></details>
+    <details><summary>3er Semestre</summary><p>Matemáticas 3</p><p>Biología</p><p>Física 1</p><p>Historia</p><p>Literatura</p><p>Inglés 3</p><p>Ética y valores</p></details>
+    <details><summary>4to Semestre</summary><p>Física 2</p><p>Ecología</p><p>Historia 2</p><p>Inglés 4</p><p>Literatura 2</p><p>Introducción al derecho</p><p>Educación física</p></details>
+    <details><summary>5to Semestre</summary><p>Derecho civil</p><p>Psicología jurídica</p><p>Derecho penal</p><p>Historia del derecho</p><p>Derecho constitucional</p><p>Teoría del derecho</p></details>
+    <details><summary>6to Semestre</summary><p>Práctica jurídica</p><p>Derecho laboral</p><p>Derecho mercantil</p><p>Derecho internacional</p><p>Derecho administrativo</p><p>Derechos humanos</p></details>
+  </div>
+
+  <script>
+    const musica = document.getElementById('musica-fondo');
+    let reproduciendo = false;
+
+    function toggleMusic() {
+      if (reproduciendo) {
+        musica.pause();
+      } else {
+        musica.volume = 0.5;
+        musica.play().catch(error => console.log('Error al reproducir:', error));
+      }
+      reproduciendo = !reproduciendo;
+    }
+
+    window.addEventListener('scroll', function () {
+      const contenido = document.querySelector('.contenido');
+      const posicion = contenido.getBoundingClientRect().top;
+      const alturaPantalla = window.innerHeight;
+      if (posicion < alturaPantalla - 100) {
+        contenido.classList.add('visible');
+      }
+    });
+  </script>
+</body>
+</html>
