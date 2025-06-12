@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Las 7R del Reciclaje</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: none;
+      color: #1a237e;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #6a1b9a;
+      text-align: center;
+    }
+
+    h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      color: #8e24aa;
+      text-align: center;
+    }
+
+    p {
+      text-align: justify;
+      color: #4a148c;
+    }
+
+    .pantalla-inicio {
+      height: 100vh;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .pantalla-inicio button,
+    .boton-link {
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #ce93d8;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .pantalla-inicio button:hover,
+    .boton-link:hover {
+      background-color: #ab47bc;
+    }
+
+    .contenido {
+      padding: 20px;
+      background: #fffafc;
+    }
+
+    .section {
+      padding: 20px;
+      margin: 20px auto;
+      border: 1px solid #f3e5f5;
+      border-radius: 10px;
+      max-width: 900px;
+      background: #fce4ec;
+    }
+
+    img {
+      display: block;
+      max-width: 90%;
+      margin: 15px auto;
+      border-radius: 6px;
+    }
+
+    iframe {
+      display: block;
+      margin: 20px auto;
+      max-width: 90%;
+      width: 560px;
+      height: 315px;
+      border: none;
+      border-radius: 6px;
+    }
+
+    table {
+      width: 90%;
+      margin: 30px auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #f8bbd0;
+      padding: 10px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    th {
+      background-color: #f06292;
+      color: white;
+    }
+
+    td {
+      background-color: #fce4ec;
+    }
+
+    .agradecimiento {
+      text-align: center;
+      font-size: 1.3em;
+      margin-top: 40px;
+      background-color: #f3e5f5;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pantalla-inicio">
+    <h1>Conoce las 7R del Reciclaje</h1>
+    <h1>Presentado por Jen</h1>
+    <button onclick="document.getElementById('principal').scrollIntoView({ behavior: 'smooth' });">Explorar</button>
+    <button onclick="toggleMusic()">🎵 Música</button>
+    <a href="pag2.html" class="boton-link">Volver a la Página 2</a>
+    <a href="pag3.html" class="boton-link">Volver a la Página 3</a>
+  </div>
+
+  <audio id="musica-fondo" preload="auto" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-betterdays.mp3" type="audio/mpeg" />
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <div class="contenido" id="principal">
+    <h1>Las 7R del Reciclaje</h1>
+
+    <div class="section">
+      <h2>¿Qué significan las 7R?</h2>
+      <p>Las 7R son principios que impulsan una forma sostenible de vivir, ayudando a reducir la contaminación y conservar los recursos. Estas son: Rediseñar, Reducir, Reutilizar, Reparar, Renovar, Recuperar y Reciclar.</p>
+      <img src="https://hydronik.es/wp-content/uploads/2021/04/Economia-circular.png" alt="Representación de las 7R" />
+      <p style="text-align: center; font-size: 0.9em; color: #6a1b9a;">Imagen: Economía circular y sostenibilidad</p>
+    </div>
+
+    <div class="section">
+      <h2>Explicación de cada R</h2>
+
+      <div class="r-item">
+        <h3>Rediseñar</h3>
+        <p>Repensar el diseño de productos para que causen el menor daño posible al medio ambiente desde su creación.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/2784/2784450.png" alt="Rediseñar" />
+      </div>
+
+      <div class="r-item">
+        <h3>Reducir</h3>
+        <p>Minimizar el uso de recursos y generar menos residuos con hábitos responsables de consumo.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/639/639365.png" alt="Reducir" />
+      </div>
+
+      <div class="r-item">
+        <h3>Reutilizar</h3>
+        <p>Volver a usar artículos para alargar su vida útil, evitando desecharlos rápidamente.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/1049/1049254.png" alt="Reutilizar" />
+      </div>
+
+      <div class="r-item">
+        <h3>Reparar</h3>
+        <p>Solucionar fallos en objetos para seguir aprovechándolos, en vez de reemplazarlos por nuevos.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/862/862875.png" alt="Reparar" />
+      </div>
+
+      <div class="r-item">
+        <h3>Renovar</h3>
+        <p>Mejorar objetos antiguos o dañados para que puedan continuar siendo útiles.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/1035/1035688.png" alt="Renovar" />
+      </div>
+
+      <div class="r-item">
+        <h3>Recuperar</h3>
+        <p>Extraer componentes o materiales que aún se pueden aprovechar antes de desecharlos por completo.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/5207/5207534.png" alt="Recuperar" />
+      </div>
+
+      <div class="r-item">
+        <h3>Reciclar</h3>
+        <p>Transformar residuos en recursos nuevos mediante procesos adecuados.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/3759/3759444.png" alt="Reciclar" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>¿Por qué aplicar las 7R?</h2>
+      <p>Estas acciones reducen los impactos negativos sobre el medio ambiente, disminuyen la generación de basura y fomentan el uso eficiente de los recursos.</p>
+      <p>Adoptar las 7R promueve una cultura más responsable y contribuye al desarrollo sostenible.</p>
+    </div>
+
+    <div class="section">
+      <h2>Beneficios ecológicos</h2>
+      <p>Menos desechos y más reutilización significan menos contaminación, más biodiversidad y una vida más saludable para todos.</p>
+      <p>Con pequeñas acciones individuales o colectivas, es posible proteger nuestro planeta.</p>
+    </div>
+
+    <div class="section">
+      <h2>Video educativo</h2>
+      <iframe src="https://www.youtube.com/embed/UIkFrJ9Ujag" allowfullscreen></iframe>
+      <p>Este video ofrece una guía práctica para incorporar las 7R en tu rutina diaria.</p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>R</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Rediseñar</td><td>Concebir productos con visión ecológica.</td></tr>
+        <tr><td>Reducir</td><td>Evitar el consumo innecesario.</td></tr>
+        <tr><td>Reutilizar</td><td>Aprovechar los objetos más de una vez.</td></tr>
+        <tr><td>Reparar</td><td>Solucionar fallos en lugar de desechar.</td></tr>
+        <tr><td>Renovar</td><td>Actualizar lo antiguo para no tirarlo.</td></tr>
+        <tr><td>Recuperar</td><td>Rescatar materiales útiles de los residuos.</td></tr>
+        <tr><td>Reciclar</td><td>Procesar los desechos para crear nuevos objetos.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="agradecimiento">
+      ¡Gracias por visitar esta página dedicada al cuidado del planeta!
+    </div>
+  </div>
+
+  <script>
+    const musica = document.getElementById('musica-fondo');
+    let reproduciendo = false;
+
+    function toggleMusic() {
+      if (reproduciendo) {
+        musica.pause();
+      } else {
+        musica.volume = 0.5;
+        musica.play().catch(error => console.log('Error al reproducir:', error));
+      }
+      reproduciendo = !reproduciendo;
+    }
+  </script>
+</body>
+</html>
